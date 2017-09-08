@@ -1,4 +1,4 @@
-package com.kreezcraft.woodstone;
+package com.kreezcraft.woodstone.proxies;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;

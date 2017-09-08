@@ -2,6 +2,8 @@ package com.kreezcraft.woodstone;
 
 import org.apache.logging.log4j.Level;
 
+import com.kreezcraft.woodstone.proxies.CommonProxy;
+
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {

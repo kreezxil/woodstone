@@ -2,6 +2,8 @@ package com.kreezcraft.woodstone;
 
 import org.apache.logging.log4j.Logger;
 
+import com.kreezcraft.woodstone.proxies.CommonProxy;
+
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -17,7 +19,7 @@ public class Woodstone
     public static final String VERSION = "1.12.1-1.1";
     public static final String NAME = "Woodstone";
     
-    @SidedProxy(clientSide = "com.kreezcraft.woodstone.ClientProxy", serverSide = "com.kreezcraft.woodstone.ServerProxy")
+    @SidedProxy(clientSide = "com.kreezcraft.woodstone.proxies.ClientProxy", serverSide = "com.kreezcraft.woodstone.proxies.ServerProxy")
     public static CommonProxy proxy;
 
     @Mod.Instance

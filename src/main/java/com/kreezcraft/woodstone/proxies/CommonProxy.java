@@ -1,6 +1,8 @@
-package com.kreezcraft.woodstone;
+package com.kreezcraft.woodstone.proxies;
 
 import java.io.File;
+
+import com.kreezcraft.woodstone.Config;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.PropertyBool;
