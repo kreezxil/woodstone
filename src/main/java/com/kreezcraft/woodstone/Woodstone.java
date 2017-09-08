@@ -2,7 +2,8 @@ package com.kreezcraft.woodstone;
 
 import org.apache.logging.log4j.Logger;
 
-import com.kreezcraft.woodstone.proxies.CommonProxy;
+import com.kreezcraft.woodstone.proxy.CommonProxy;
+import com.kreezcraft.woodstone.recipes.ModRecipes;
 
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
@@ -19,28 +20,28 @@ public class Woodstone
     public static final String VERSION = "1.12.1-1.1";
     public static final String NAME = "Woodstone";
     
-    @SidedProxy(clientSide = "com.kreezcraft.woodstone.proxies.ClientProxy", serverSide = "com.kreezcraft.woodstone.proxies.ServerProxy")
-    public static CommonProxy proxy;
+	@SidedProxy(serverSide = "com.kreezcraft.woodstone.proxy.CommonProxy", clientSide = "com.kreezcraft.woodstone.proxy.ClientProxy")
+	public static CommonProxy proxy;
 
     @Mod.Instance
     public static Woodstone instance;
+    
+    public static final WoodstoneTab creativeTab = new WoodstoneTab("Woodstone");
 
     public static Logger logger;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
-        proxy.preInit(event);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
-        proxy.init(e);
+        ModRecipes.init();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent e) {
-        proxy.postInit(e);
     }
     
 }

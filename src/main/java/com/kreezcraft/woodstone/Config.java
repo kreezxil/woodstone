@@ -2,7 +2,7 @@ package com.kreezcraft.woodstone;
 
 import org.apache.logging.log4j.Level;
 
-import com.kreezcraft.woodstone.proxies.CommonProxy;
+import com.kreezcraft.woodstone.proxy.CommonProxy;
 
 import net.minecraftforge.common.config.Configuration;
 
